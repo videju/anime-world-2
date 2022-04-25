@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+li{
+    color: white;
+}
+li:hover{
+    color: #C74B50;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    top:0;
+
+}
+.menu{
+    position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+    
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+position:  absolute;
+left: 0;
+ list-style: none;
+ transform-origin: 100px; ;
+ transition: 0.5s;
+ transition-delay: calc(0.1s * var(--i));
+ transform: rotate(0deg) translateX(80px)
+
+}
+.menu.active li{
+    transform: rotate(calc(360deg /8 * var(--i)));
+    
+}
+.menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius:  50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    color: #111;
+    transition: 0.5s;
+}
+.menu li a:hover{
+    color: #C74B50;
+}
+.toggle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow:  0 3px 4px rgba(0, 0, 0, 0.15);
+    font-size: 2rem;
+    transition: transform 1.25s;
+}
+.menu.active .toggle
+{
+    transform: rotate(315deg);
+}
+/* my code */
+.menu{
+    margin-left: 70vw;
+    z-index: 10000;
+}
+
+/* code for image slider */
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.swiper{
+    width: 80%;
+    height: 80%;
+}
+.swiper-slide img{
+    width: 100%;
+    height:cover;
+}
+.swiper .swiper-button-prev,.swiper .swiper-button-next{
+color: #fff;
+}
+.swiper .swiper-pagination-bullet-active{
+    background: #fff;
+}
+.text{
+    max-width: 50%;
+    position: absolute;
+    top: 0%;
+    transform: translateY(-50%);
+    background-color: #C74B50;
+    margin-top: 25vh;
+  border-radius: 25%;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.8);
+}
+
+.text h5{
+    font-size: 5vw;
+    
+    font-family:'Poppins',sans-serif ;
+    color: #fff;
+}
